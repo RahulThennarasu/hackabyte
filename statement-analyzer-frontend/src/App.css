@@ -1,0 +1,245 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  background-color: #6200ea;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Main Content */
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.analysis-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures children are centered */
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+textarea {
+  width: 100%; /* Make it take up the full width of its container */
+  max-width: 800px; /* Set a maximum width for the textarea */
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 250px; /* Increased height for the textarea */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto; /* Center the textarea horizontally */
+}
+
+textarea:focus {
+  border-color: #66acd7;
+  box-shadow: 0 0 0 3px rgba(98, 0, 234, 0.1);
+  outline: none;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #66acd7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #66acd7;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Result Box */
+.result-box {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.result-box h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #66acd7;
+}
+
+.result-box p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.sources-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+.sources-list li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.sources-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.sources-list a {
+  color: #66acd7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sources-list a:hover {
+  text-decoration: underline;
+}
+
+/* Screen Capture Section */
+.screen-capture {
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.screen-capture button {
+  margin-bottom: 20px;
+}
+
+.video-box {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #66acd7;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .result-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .result-box p {
+    font-size: 1rem;
+  }
+
+  .video-box {
+    width: 100%;
+    height: auto;
+  }
+}
