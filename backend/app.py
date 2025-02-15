@@ -7,11 +7,11 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # Configure Gemini API
-GEMINI_API_KEY = "AIzaSyCikf9gNf-dWLn9PDm-ob5Q3CfdOPnewhw"
+GEMINI_API_KEY = ""
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Configure YOU API
-YOU_API_KEY = "9c9fb9d5-b9c2-4e84-8bef-9be0f0a49316<__>1Qdi5JETU8N2v5f4AiPx1lcJ"
+YOU_API_KEY = ""
 
 def get_ai_snippets_for_query(query):
     """Fetch AI-generated snippets from YOU API for a given query."""
