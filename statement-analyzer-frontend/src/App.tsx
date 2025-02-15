@@ -57,7 +57,7 @@ const App: React.FC = () => {
       arecorder.current = new MediaRecorder(astream.current);
       arecorder.current.ondataavailable = async (e) => {
         if (e.data.size > 0) {
-          await transcribe(e.data, groq); // Call transcription function
+          await transcribe(e.data, groq); //` Call transcription function
         }
       };
 
@@ -139,7 +139,7 @@ const App: React.FC = () => {
         console.log("Disconnected from Hume AI");
       };
 
-      // Capture video frames and send to Hume AI
+      
       const captureInterval = setInterval(() => {
         if (videoRef.current && canvasRef.current && humeSocket.current) {
           const canvas = canvasRef.current;
